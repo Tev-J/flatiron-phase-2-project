@@ -1,20 +1,20 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import Bookings from "./components/Bookings";
-import BarberPortfolio from "./components/BarberPortfolio";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavBar from "./NavBar";
+import Home from "./Home";
+import Bookings from "./Bookings";
+import Portfolio from "./Portfolio";
 
 function App() {
   return (
-    <Router>
+    <div>
       <NavBar />
-      <Switch>
+      <Routes>
         <Route exact path="/" component={Home} />
         <Route path="/bookings" component={Bookings} />
-        <Route path="/portfolio" component={BarberPortfolio} />
-      </Switch>
-    </Router>
+        <Route path="/portfolio" component={Portfolio} />
+      </Routes>
+    </div>
   );
 }
 
