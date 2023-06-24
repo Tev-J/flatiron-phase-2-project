@@ -1,19 +1,30 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Navbar, Container, Nav } from "react-bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 function NavBar() {
   return (
-    <nav>
-      <NavLink exact to="/" activeClassName="active">
-        Home
-      </NavLink>
-      <NavLink to="/bookings" activeClassName="active">
-        Bookings
-      </NavLink>
-      <NavLink to="/portfolio" activeClassName="active">
-        Portfolio
-      </NavLink>
-    </nav>
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand as={NavLink} to="/">
+            Navbar
+          </Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link as={NavLink} to="/" exact>
+              Home
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/bookings">
+              Bookings
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/portfolio">
+              Portfolio
+            </Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </>
   );
 }
 
