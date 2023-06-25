@@ -13,13 +13,14 @@ function NavBar() {
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to="/" exact>
-              Home
+              Style List
+            </Nav.Link>
+
+            <Nav.Link as={NavLink} to="/portfolio">
+              Community
             </Nav.Link>
             <Nav.Link as={NavLink} to="/bookings">
-              Bookings
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/portfolio">
-              Portfolio
+              Book With Us
             </Nav.Link>
           </Nav>
         </Container>
