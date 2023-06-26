@@ -5,6 +5,7 @@ import Home from "./Home";
 import Bookings from "./Bookings";
 import Portfolio from "./Portfolio";
 import StyleCard from "./StyleCard";
+import NewStyleCard from "./NewStyleCard";
 
 function App() {
   const [styles, setStyles] = useState([]);
@@ -18,12 +19,12 @@ function App() {
   return (
     <div>
       <NavBar />
+      <NewStyleCard styles={styles} />
       <Routes>
         <Route exact={true} path="/" element={<Home />} />
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/portfolio" element={<Portfolio styles={styles} />} />
       </Routes>
-      {/* <StyleCard /> */}
     </div>
   );
 }
