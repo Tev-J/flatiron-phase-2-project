@@ -20,7 +20,7 @@ function NavBar() {
             </Nav.Link> */}
 
             <Nav.Link as={NavLink} to="/portfolio">
-              Community
+              Inspiration
             </Nav.Link>
             <Nav.Link as={NavLink} to="/bookings">
               Book With Us
