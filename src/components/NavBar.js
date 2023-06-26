@@ -8,7 +8,11 @@ function NavBar() {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand as={NavLink} to="/home">
-            Navbar
+            <img
+              src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+              alt="Navbar Logo"
+              style={{ width: "50px", height: "auto" }}
+            />
           </Navbar.Brand>
           <Nav className="me-auto">
             {/* <Nav.Link as={NavLink} to="/" exact>

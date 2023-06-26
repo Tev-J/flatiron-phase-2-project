@@ -19,9 +19,9 @@ function App() {
     <div>
       <NavBar />
       <Routes>
-        <Route exact path="/" component={Home} />
-        <Route path="/bookings" component={Bookings} />
-        <Route path="/portfolio" component={Portfolio} />
+        <Route exact={true} path="/" element={<Home />} />
+        <Route path="/bookings" element={<Bookings />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
       <StyleCard />
     </div>
