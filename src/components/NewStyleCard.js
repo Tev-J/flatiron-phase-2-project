@@ -7,23 +7,21 @@ function NewStyleCard({ addStyles, styles }) {
   const [styleImg, setStyleImg] = useState("");
 
   const styleOptions = styles.filter((style) => {
-    return style.origin === "Default";
+    return style.origin == "Default";
   });
 
-  console.log(styleOptions);
-
-  //performs POST to db
-  const handleSubmit = (event) => {
+  //performs POST to db on submit
+  function handleSubmit(event) {
     event.preventDefault();
+
     const styleObj = {
-      styleInfo: {
-        name: selectedStyle,
-        image: styleImg,
-        description: userName,
-        likes: 0,
-        price: "unknown",
-        origin: "Community_Post",
-      },
+      id: userName,
+      name: selectedStyle,
+      image: styleImg,
+      description: userName,
+      likes: 0,
+      price: "unknown",
+      origin: "Community_Post",
     };
 
     fetch("https://my-server-j9z7.onrender.com/db/db.json/styles", {
@@ -35,10 +33,7 @@ function NewStyleCard({ addStyles, styles }) {
     })
       .then((r) => r.json())
       .then((data) => addStyles(data.styleObj));
-    // Perform form submission or further processing
-    // console.log("Selected Style:", selectedStyle);
-    // console.log("Input Value:", inputValue);
-  };
+  }
 
   return (
     <form className="container" onSubmit={handleSubmit}>
@@ -57,7 +52,7 @@ function NewStyleCard({ addStyles, styles }) {
         className="form-control"
         id="floatingInputValue"
         placeholder="Image URL"
-        value={userName}
+        value={styleImg}
         onChange={(e) => setStyleImg(e.target.value)}
       />
 
@@ -70,7 +65,7 @@ function NewStyleCard({ addStyles, styles }) {
         >
           <option value="">Community Uploads</option>
 
-          {styles.map((style) => (
+          {styleOptions.map((style) => (
             <option key={style.id} value={style.id}>
               {style.name}
             </option>

@@ -24,7 +24,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <NewStyleCard styles={styles} />
+      <NewStyleCard addStyles={addStyles} styles={styles} />
       <Routes>
         <Route exact={true} path="/" element={<Home />} />
         <Route path="/bookings" element={<Bookings />} />
