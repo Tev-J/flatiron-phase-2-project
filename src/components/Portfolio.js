@@ -1,9 +1,15 @@
 import React from "react";
+import StyleCard from "./StyleCard";
 
-function Portfolio() {
+function Portfolio({ styles }) {
   return (
     <div>
-      <p> Portfolio works </p>
+      <h2>Fresh Cuts Bruh</h2>
+      <>
+        {styles.map((style) => (
+          <StyleCard key={style.id} style={style} />
+        ))}
+      </>
     </div>
   );
 }

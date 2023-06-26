@@ -1,27 +1,20 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Button } from "react-bootstrap";
 
-function StyleCard() {
+function StyleCard({ style }) {
+  const { id, name, image, likes } = style;
+
   return (
-    <Card>
-      <Image
-        src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-        wrapped
-        ui={false}
-      />
-      <Card.Content>
-        <Card.Header>Buzz Cut</Card.Header>
-        <Card.Meta>
-          <span className="date">Joined in 2015</span>
-        </Card.Meta>
-        <Card.Description>This cut is fresh AF.</Card.Description>
-      </Card.Content>
-      <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
-      </Card.Content>
+    <Card style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={image} alt={name} />
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
     </Card>
   );
 }

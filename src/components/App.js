@@ -21,9 +21,9 @@ function App() {
       <Routes>
         <Route exact={true} path="/" element={<Home />} />
         <Route path="/bookings" element={<Bookings />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio" element={<Portfolio styles={styles} />} />
       </Routes>
-      <StyleCard />
+      {/* <StyleCard /> */}
     </div>
   );
 }
