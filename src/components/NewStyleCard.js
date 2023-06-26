@@ -14,25 +14,22 @@ function NewStyleCard({ addStyles, styles }) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const styleObj = {
-      id: userName,
-      name: selectedStyle,
-      image: styleImg,
-      description: userName,
-      likes: 0,
-      price: "unknown",
-      origin: "Community_Post",
+    const configObj = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: selectedStyle,
+        image: styleImg,
+        description: userName,
+        likes: 0,
+        price: "unknown",
+        origin: "Community_Post",
+      }),
     };
 
-    fetch("https://my-server-j9z7.onrender.com/db/db.json/styles", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(styleObj),
-    })
-      .then((r) => r.json())
-      .then((data) => addStyles(data.styleObj));
+    fetch("https://my-server-j9z7.onrender.com/db/db.json/styles", configObj)
+      .then((res) => res.json())
+      .then((data) => addStyles(data));
   }
 
   return (
