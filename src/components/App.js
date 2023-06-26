@@ -16,6 +16,11 @@ function App() {
       .then((data) => setStyles(data.styles));
   }, []);
 
+  function addStyles(newStyle) {
+    const updatedStyles = [...styles, newStyle];
+    setStyles(updatedStyles);
+  }
+
   return (
     <div>
       <NavBar />
