@@ -10,13 +10,10 @@ function App() {
   const [styles, setStyles] = useState([]);
 
   useEffect(() => {
-    fetch("https://my-server-j9z7.onrender.com")
+    fetch("https://my-server-j9z7.onrender.com/db")
       .then((r) => r.json())
-      .then((data) => console.log(data));
-    // .then((data) => setStyles(data.styles));
+      .then((data) => setStyles(data.styles));
   }, []);
-
-  console.log(styles);
 
   return (
     <div>
