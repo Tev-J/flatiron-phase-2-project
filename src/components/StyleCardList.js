@@ -2,7 +2,7 @@ import React from "react";
 import StyleCard from "./StyleCard";
 import { Card } from "react-bootstrap";
 
-function Portfolio({ styles }) {
+function StyleCardList({ styles }) {
   return (
     <div>
       <h2 style={{ textAlign: "center" }}>Fresh Cuts Bruh</h2>
@@ -19,4 +19,4 @@ function Portfolio({ styles }) {
   );
 }
 
-export default Portfolio;
+export default StyleCardList;

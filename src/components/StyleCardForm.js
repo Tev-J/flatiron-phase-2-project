@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewStyleCard({ addStyles, styles }) {
+function StyleCardForm({ addStyles, styles }) {
   //stores data in component state
   const [userName, setUserName] = useState("");
   const [selectedStyle, setSelectedStyle] = useState("");
@@ -84,4 +84,4 @@ function NewStyleCard({ addStyles, styles }) {
   );
 }
 
-export default NewStyleCard;
+export default StyleCardForm;

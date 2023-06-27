@@ -7,23 +7,22 @@ function NavBar() {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand as={NavLink} to="/home">
+          <Navbar.Brand as={NavLink} to="/" exact>
             <img
               src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
               alt="Navbar Logo"
-              style={{ width: "50px", height: "auto" }}
+              style={{ width: "55px", height: "auto" }}
             />
           </Navbar.Brand>
           <Nav className="me-auto">
-            {/* <Nav.Link as={NavLink} to="/" exact>
-              Style List
-            </Nav.Link> */}
-
-            <Nav.Link as={NavLink} to="/portfolio">
+            <Nav.Link as={NavLink} to="/inspiration">
               Inspiration
             </Nav.Link>
             <Nav.Link as={NavLink} to="/bookings">
               Book With Us
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/community">
+              Community
             </Nav.Link>
           </Nav>
         </Container>
