@@ -7,7 +7,7 @@ function NavBar() {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand as={NavLink} to="/" exact>
+          <Navbar.Brand as={NavLink} to="/" exact="true">
             <img
               src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
               alt="Navbar Logo"

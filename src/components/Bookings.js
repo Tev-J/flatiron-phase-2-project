@@ -1,9 +1,13 @@
 import React from "react";
+import StyleCardForm from "./StyleCardForm";
 
 function Bookings() {
   return (
     <div>
-      <p> bookings works </p>
+      <div>
+        <p> bookings works </p>
+      </div>
+      <div>{/* <StyleCardForm /> */}</div>
     </div>
   );
 }

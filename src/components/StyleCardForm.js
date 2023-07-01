@@ -1,16 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function StyleCardForm({ addStyles, styles }) {
-  //stores data in component state
+  const navigate = useNavigate();
   const [userName, setUserName] = useState("");
   const [selectedStyle, setSelectedStyle] = useState("");
   const [styleImg, setStyleImg] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const styleOptions = styles.filter((style) => {
-    return style.origin === "Default";
-  });
+  const styleOptions = styles.filter((style) => style.origin === "Default");
 
-  //performs POST to db on submit
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -29,58 +28,86 @@ function StyleCardForm({ addStyles, styles }) {
 
     fetch("https://my-server-j9z7.onrender.com/db/db.json/styles", configObj)
       .then((res) => res.json())
-      .then((data) => addStyles(data));
-
-    setUserName("");
-    setSelectedStyle("");
-    setStyleImg("");
+      .then((data) => {
+        addStyles(data);
+        setUserName("");
+        setSelectedStyle("");
+        setStyleImg("");
+        setIsSubmitted(true);
+        setTimeout(() => {
+          navigate("/community"); // Redirect to the Community page after 2 seconds
+        }, 3000);
+      });
   }
 
   return (
-    <form className="container" onSubmit={handleSubmit}>
-      <h2>Upload Your Fresh Cuts!</h2>
-      <input
-        onChange={(e) => setUserName(e.target.value)}
-        type="text"
-        className="form-control"
-        id="floatingInputValue"
-        placeholder="Username"
-        value={userName}
-      />
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        {isSubmitted ? (
+          <div style={{ textAlign: "center" }}>
+            <h1
+              class="display-5 fw-bold"
+              style={{
+                color: "#80e0aa",
+                fontSize: "56px",
+              }}
+            >
+              🎊 PERFECT! 🎊{" "}
+            </h1>
+            <p>Your post was successfully added to the inspiration pool!</p>
+            <p>You will now be rerouted to the Community Page.</p>
+          </div>
+        ) : (
+          <form className="container" onSubmit={handleSubmit}>
+            <h1 class="display-5 fw-bold">Upload Style</h1>
+            <div class="mb-3">
+              <input
+                onChange={(e) => setUserName(e.target.value)}
+                type="text"
+                className="form-control "
+                id="floatingInputValue"
+                placeholder="Username"
+                value={userName}
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                onChange={(e) => setStyleImg(e.target.value)}
+                type="text"
+                className="form-control"
+                id="floatingInputValue"
+                placeholder="Image URL"
+                value={styleImg}
+              />
+            </div>
 
-      <input
-        onChange={(e) => setStyleImg(e.target.value)}
-        type="text"
-        className="form-control"
-        id="floatingInputValue"
-        placeholder="Image URL"
-        value={styleImg}
-      />
+            <div className="form-floating mb-3">
+              <select
+                className="form-select"
+                id="floatingSelect"
+                value={isSubmitted ? "" : selectedStyle}
+                onChange={(e) => setSelectedStyle(e.target.value)}
+              >
+                <option value="">Community Upload</option>
 
-      <div className="form-floating">
-        <select
-          className="form-select"
-          id="floatingSelect"
-          value={selectedStyle}
-          onChange={(e) => setSelectedStyle(e.target.value)}
-        >
-          <option value="">Community Uploads</option>
+                {styleOptions.map((style) => (
+                  <option key={style.id} value={style.name}>
+                    {style.name}
+                  </option>
+                ))}
+              </select>
+              <label htmlFor="floatingSelect">Style Name</label>
+            </div>
 
-          {styleOptions.map((style) => (
-            <option key={style.id} value={style.name}>
-              {style.name}
-            </option>
-          ))}
-        </select>
-        <label htmlFor="floatingSelect">Style Name</label>
+            <div>
+              <button type="submit" className="btn btn-outline-dark col-12">
+                Submit
+              </button>
+            </div>
+          </form>
+        )}
       </div>
-
-      <div>
-        <button type="submit" className="btn btn-outline-dark col-12">
-          Submit
-        </button>
-      </div>
-    </form>
+    </div>
   );
 }
 

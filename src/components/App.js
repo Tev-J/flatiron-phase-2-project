@@ -5,7 +5,7 @@ import Home from "./Home";
 import Bookings from "./Bookings";
 import StyleCardList from "./StyleCardList";
 import StyleCard from "./StyleCard";
-import NewStyleCard from "./StyleCardForm";
+import StyleCardForm from "./StyleCardForm";
 import CommunityBoard from "./CommunityBoard";
 
 function App() {
@@ -34,6 +34,10 @@ function App() {
           element={<StyleCardList styles={styles} />}
         />
         <Route path="/community" element={<CommunityBoard />} />
+        <Route
+          path="/community/form"
+          element={<StyleCardForm addStyles={addStyles} styles={styles} />}
+        />
       </Routes>
     </div>
   );
