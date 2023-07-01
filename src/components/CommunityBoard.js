@@ -9,28 +9,29 @@ function CommunityBoard() {
   };
 
   return (
-    <div class="container py-4">
-      <div class="p-5 mb-4 bg-light rounded-3">
-        <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">Share Your Style</h1>
-          <p class="col-md-8 fs-4">
-            Join our community by posting a picture of your new haircut. Entrees
-            will be posted to the Inspiration board, where visitors will be able
-            to see your contributions. Showcase your styles! Set new trends!
+    <div className="container py-4">
+      <div className="p-5 mb-4 bg-light rounded-3">
+        <div className="container-fluid py-5">
+          <h1 className="display-5 fw-bold">Share And Inspire!</h1>
+          <p className="col-md-8 fs-4">
+            Join our community! Share a picture of your new haircut. Entrees
+            will be posted to the Inspiration board where visitors will be able
+            to see and rate your contributions. Showcase your styles! Set new
+            trends! Inspire!
           </p>
           <button
-            class="btn btn-primary btn-lg"
+            className="btn btn-primary btn-lg"
             type="button"
             onClick={handleUploadPhoto}
           >
-            Upload Photo
+            Upload Your Photo Here
           </button>
         </div>
       </div>
 
-      <div class="row align-items-md-stretch">
-        <div class="col-md-6">
-          <div class="h-100 p-5 text-white bg-dark rounded-3">
+      <div className="row align-items-md-stretch">
+        <div className="col-md-6">
+          <div className="h-100 p-5 text-white bg-dark rounded-3">
             <h2>Eum dolores minus sed iste modi.</h2>
             <p>
               Lorem ipsum dolor sit amet. Cum quia nisi quo perspiciatis fugiat
@@ -40,13 +41,13 @@ function CommunityBoard() {
               repellendus eius ut maiores quod et voluptatum doloremque ut minus
               adipisci ea cumque earum.
             </p>
-            <button class="btn btn-outline-light" type="button">
+            <button className="btn btn-outline-light" type="button">
               Press for Good Luck
             </button>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="h-100 p-5 bg-light border rounded-3">
+        <div className="col-md-6">
+          <div className="h-100 p-5 bg-light border rounded-3">
             <h2>Est quasi quos est accusamus veritatis.</h2>
             <p>
               Qui nihil quibusdam et saepe obcaecati sed exercitationem neque ab
@@ -54,25 +55,13 @@ function CommunityBoard() {
               aperiam qui velit nisi in laudantium dolor sit unde quia rem ipsum
               molestiae.
             </p>
-            <button class="btn btn-outline-secondary" type="button">
+            <button className="btn btn-outline-secondary" type="button">
               Useless button
             </button>
           </div>
         </div>
       </div>
     </div>
-
-    // <div>
-    //   <h1>Upload Cut</h1>
-    //   <span className="border-top-0 border border-info">
-    //     <div>
-    //       <img
-    //         src="https://cdn.midjourney.com/0f6ee806-f968-450d-a011-ac7f5184161f/0_2.png"
-    //         alt="Community Board Image"
-    //       />
-    //     </div>
-    //   </span>
-    // </div>
   );
 }
 

@@ -30,23 +30,25 @@ function StyleCardForm({ addStyles, styles }) {
       .then((res) => res.json())
       .then((data) => {
         addStyles(data);
+        // Reset form fields
         setUserName("");
         setSelectedStyle("");
         setStyleImg("");
         setIsSubmitted(true);
+        // Redirect to the Community page after 3 seconds
         setTimeout(() => {
-          navigate("/community"); // Redirect to the Community page after 2 seconds
+          navigate("/community");
         }, 3000);
       });
   }
 
   return (
-    <div class="p-5 mb-4 bg-light rounded-3">
-      <div class="container-fluid py-5">
+    <div className="p-5 mb-4 bg-light rounded-3">
+      <div className="container-fluid py-5">
         {isSubmitted ? (
           <div style={{ textAlign: "center" }}>
             <h1
-              class="display-5 fw-bold"
+              className="display-5 fw-bold"
               style={{
                 color: "#80e0aa",
                 fontSize: "56px",
@@ -59,8 +61,8 @@ function StyleCardForm({ addStyles, styles }) {
           </div>
         ) : (
           <form className="container" onSubmit={handleSubmit}>
-            <h1 class="display-5 fw-bold">Upload Style</h1>
-            <div class="mb-3">
+            <h1 className="display-5 fw-bold">Upload Style</h1>
+            <div className="mb-3">
               <input
                 onChange={(e) => setUserName(e.target.value)}
                 type="text"
