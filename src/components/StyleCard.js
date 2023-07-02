@@ -19,21 +19,24 @@ function StyleCard({ styleDesign }) {
       .then((res) => res.json())
       .then((data) => {
         setUpdatedLikes(newLikes);
-      })
-      .catch((error) => {
-        console.log("Error updating likes:", error);
       });
   };
 
+  const cardStyle = {
+    width: "18rem",
+    height: "100%",
+  };
+
+  const imageStyle = {
+    objectFit: "contain",
+    maxHeight: "200px",
+    maxWidth: "100%",
+  };
+
   return (
-    <div className="col-md-4 mb-4">
-      <Card style={{ width: "18rem", height: "100%" }}>
-        <Card.Img
-          variant="top"
-          src={image}
-          alt={name}
-          style={{ objectFit: "cover", height: "70%" }}
-        />
+    <div className="col-md-4 mb-4 " style={cardStyle}>
+      <Card className="shadow p-3 mb-5 bg-white rounded">
+        <Card.Img variant="top" src={image} alt={name} style={imageStyle} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description}</Card.Text>
