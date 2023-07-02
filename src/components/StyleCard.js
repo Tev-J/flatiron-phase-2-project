@@ -4,19 +4,24 @@ import { Card, Button } from "react-bootstrap";
 function StyleCard({ styleDesign }) {
   const { id, image, name, description, likes, price } = styleDesign;
   const [liked, setLiked] = useState(false);
+  const [updatedLikes, setUpdatedLikes] = useState(likes);
 
-  //sets like button as active and updates likes
+  // sets like button as active and updates likes
   const handleLike = () => {
     setLiked(!liked);
+    const newLikes = liked ? updatedLikes - 1 : updatedLikes + 1;
 
     fetch(`https://my-server-j9z7.onrender.com/db/db.json/styles/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ likes: liked ? likes - 1 : likes + 1 }),
+      body: JSON.stringify({ likes: newLikes }),
     })
       .then((res) => res.json())
       .then((data) => {
-        // think I need to update a state
+        setUpdatedLikes(newLikes);
+      })
+      .catch((error) => {
+        console.log("Error updating likes:", error);
       });
   };
 
@@ -38,7 +43,7 @@ function StyleCard({ styleDesign }) {
               variant={liked ? "primary" : "outline-primary"}
               onClick={handleLike}
             >
-              👍 {likes}
+              👍 {updatedLikes}
             </Button>
           </div>
         </Card.Body>
