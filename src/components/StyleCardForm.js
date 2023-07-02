@@ -38,7 +38,7 @@ function StyleCardForm({ addStyles, styles }) {
         // Redirect to the Community page after 3 seconds
         setTimeout(() => {
           navigate("/community");
-        }, 3000);
+        }, 2500);
       });
   }
 
@@ -54,10 +54,8 @@ function StyleCardForm({ addStyles, styles }) {
                 fontSize: "56px",
               }}
             >
-              🎊 PERFECT! 🎊{" "}
+              🎊 UPLOAD SUCCESSFUL! 🎊{" "}
             </h1>
-            <p>Your post was successfully added to the inspiration pool!</p>
-            <p>You will now be rerouted to the Community Page.</p>
           </div>
         ) : (
           <form className="container" onSubmit={handleSubmit}>

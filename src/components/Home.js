@@ -16,7 +16,7 @@ function Home() {
   };
 
   const contentStyle = {
-    paddingTop: "100px", // Adjust the top padding as needed
+    paddingTop: "100px",
   };
 
   return (

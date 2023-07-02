@@ -14,8 +14,8 @@ function CommunityBoard() {
         <div className="container-fluid py-5">
           <h1 className="display-5 fw-bold">Share And Inspire!</h1>
           <p className="col-md-8 fs-4">
-            Join our community! Share a picture of your new haircut. Entrees
-            will be posted to the Inspiration board where visitors will be able
+            Join our community! Share a picture of your new haircut. Uploads
+            will be posted to the Inspiration Board where visitors will be able
             to see and rate your contributions. Showcase your styles! Set new
             trends! Inspire!
           </p>
