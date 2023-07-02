@@ -17,7 +17,10 @@ function StyleCard({ styleDesign }) {
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description}</Card.Text>
           <Card.Text className="text-muted"> {price} </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <div className="d-flex justify-content-between">
+            <Button variant="primary">Go somewhere</Button>
+            <Button variant="primary">👍</Button>
+          </div>
         </Card.Body>
       </Card>
     </div>
