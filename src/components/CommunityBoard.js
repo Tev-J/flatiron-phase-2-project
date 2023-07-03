@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import StyleCardForm from "./StyleCardForm";
 import { useNavigate } from "react-router-dom";
+import Header from "./Header";
 
 function CommunityBoard() {
   const navigate = useNavigate();
@@ -10,6 +11,10 @@ function CommunityBoard() {
 
   return (
     <div className="container py-4">
+      <Header
+        pageHeader={"Join Our Community"}
+        headerSupport={"Share. Learn. Meme."}
+      />
       <div className="p-5 mb-4 bg-light rounded-3">
         <div className="container-fluid py-5">
           <h1 className="display-5 fw-bold">Share And Inspire!</h1>

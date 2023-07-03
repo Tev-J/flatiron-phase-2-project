@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "./Header";
 
 function Bookings() {
   const [clientName, setClientName] = useState("");
@@ -42,9 +43,13 @@ function Bookings() {
 
   return (
     // I need to include ternary after form is submitted //after the card buttons
-    <div className="p-5 mb-4 bg-light rounded-3">
-      <div className="container-fluid py-5">
-        <h1 className="display-5 fw-bold">Book Appointment</h1>
+    <div>
+      <Header
+        pageHeader={"Book Appointment"}
+        headerSupport={"We Call. You Confirm."}
+      />
+      <div className="container shadow-lg p-4 bg-white rounded">
+        <h3 style={{ textAlign: "center" }}>Enter your preferences.</h3>
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-6 mb-3">

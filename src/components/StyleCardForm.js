@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "./Header";
 
 function StyleCardForm({ addStyles, styles }) {
   const navigate = useNavigate();
@@ -43,8 +44,14 @@ function StyleCardForm({ addStyles, styles }) {
   }
 
   return (
-    <div className="p-5 mb-4 bg-light rounded-3">
-      <div className="container-fluid py-5">
+    <div>
+      <Header
+        pageHeader={"Show Us Your Style!"}
+        headerSupport={
+          "Upload here to post your haircut to the Inspiration Board."
+        }
+      />
+      <div className="container shadow-lg p-4 mb-5 bg-white rounded-3">
         {isSubmitted ? (
           <div style={{ textAlign: "center" }}>
             <h1
@@ -59,7 +66,7 @@ function StyleCardForm({ addStyles, styles }) {
           </div>
         ) : (
           <form className="container" onSubmit={handleSubmit}>
-            <h1 className="display-5 fw-bold">Upload Style</h1>
+            <h3 style={{ textAlign: "Center" }}>Upload Style</h3>
             <div className="mb-3">
               <input
                 onChange={(e) => setUserName(e.target.value)}
