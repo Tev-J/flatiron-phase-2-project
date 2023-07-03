@@ -38,7 +38,7 @@ function StyleCardForm({ addStyles, styles }) {
         setIsSubmitted(true);
         // Redirect to the Community page after 3 seconds
         setTimeout(() => {
-          navigate("/community");
+          navigate("/inspiration");
         }, 2500);
       });
   }
