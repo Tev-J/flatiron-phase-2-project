@@ -9,7 +9,7 @@ function StyleCardList({ styles }) {
         pageHeader={"Inspire. Be Inspired"}
         headerSupport={"Endure Change, Real Change. Design Yourself."}
       />
-      <div className="container shadow-lg p-3 mb-5 bg-white rounded">
+      <div className="container shadow-lg p-3 mb-5 bg-light rounded">
         <div className="row g-3 mt-4">
           {styles.map((style) => (
             <div className="col-12 col-md-6 col-lg-4" key={style.id}>

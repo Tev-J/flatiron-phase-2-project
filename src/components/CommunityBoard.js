@@ -15,7 +15,7 @@ function CommunityBoard() {
         pageHeader={"Join Our Community"}
         headerSupport={"Share. Learn. Meme."}
       />
-      <div className="p-5 mb-4 bg-light rounded-3">
+      <div className="p-5 mb-4 bg-light rounded-3 shadow">
         <div className="container-fluid py-5">
           <h1 className="display-5 fw-bold">Share And Inspire!</h1>
           <p className="col-md-8 fs-4">
@@ -36,7 +36,7 @@ function CommunityBoard() {
 
       <div className="row align-items-md-stretch">
         <div className="col-md-6">
-          <div className="h-100 p-5 text-white bg-dark rounded-3">
+          <div className="h-100 p-5 text-white bg-dark rounded-3 shadow">
             <h2>Eum dolores minus sed iste modi.</h2>
             <p>
               Lorem ipsum dolor sit amet. Cum quia nisi quo perspiciatis fugiat
@@ -52,7 +52,7 @@ function CommunityBoard() {
           </div>
         </div>
         <div className="col-md-6">
-          <div className="h-100 p-5 bg-light border rounded-3">
+          <div className="h-100 p-5 bg-light border rounded-3 shadow">
             <h2>Est quasi quos est accusamus veritatis.</h2>
             <p>
               Qui nihil quibusdam et saepe obcaecati sed exercitationem neque ab
