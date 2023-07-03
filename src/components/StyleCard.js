@@ -34,8 +34,8 @@ function StyleCard({ styleDesign }) {
   };
 
   return (
-    <div className="col-md-4 mb-4 " style={cardStyle}>
-      <Card className="shadow p-3 mb-5 bg-white rounded">
+    <div className="col-md-4 mb-4 mx-auto" style={cardStyle}>
+      <Card className="shadow p-3 mb-5 bg-white rounded justify-content-center">
         <Card.Img variant="top" src={image} alt={name} style={imageStyle} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
