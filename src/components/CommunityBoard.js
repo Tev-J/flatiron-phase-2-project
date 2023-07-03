@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import StyleCardForm from "./StyleCardForm";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 
@@ -8,6 +7,20 @@ function CommunityBoard() {
   const handleUploadPhoto = () => {
     navigate("/community/form");
   };
+
+  const [joke, setJoke] = useState("");
+
+  const getJoke = () => {
+    fetch("https://v2.jokeapi.dev/joke/Any?type=single")
+      .then((response) => response.json())
+      .then((data) => {
+        setJoke(data.joke);
+      });
+  };
+
+  useEffect(() => {
+    getJoke();
+  }, []);
 
   return (
     <div className="container py-4">
@@ -53,15 +66,14 @@ function CommunityBoard() {
         </div>
         <div className="col-md-6">
           <div className="h-100 p-5 bg-light border rounded-3 shadow">
-            <h2>Est quasi quos est accusamus veritatis.</h2>
-            <p>
-              Qui nihil quibusdam et saepe obcaecati sed exercitationem neque ab
-              dignissimos quia. Et reiciendis voluptas rem odit galisum ea enim
-              aperiam qui velit nisi in laudantium dolor sit unde quia rem ipsum
-              molestiae.
-            </p>
-            <button className="btn btn-outline-secondary" type="button">
-              Useless button
+            <h2>Random Joke</h2>
+            <p>{joke}</p>
+            <button
+              className="btn btn-outline-secondary"
+              type="button"
+              onClick={getJoke}
+            >
+              Get Another Joke
             </button>
           </div>
         </div>
