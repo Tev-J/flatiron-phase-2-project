@@ -1,32 +1,32 @@
 import React from "react";
-import backgroundImg from "../assets/background_chair.png";
+import backgroundImg from "../assets/background_images/background_chair.png";
 
 function Home() {
-  const styl = {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    zIndex: -1,
-    background: `url(${backgroundImg})`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-  };
-
-  const contentStyle = {
-    paddingTop: "100px",
-  };
-
   return (
-    <div>
-      <div style={styl}></div>
-      <div style={contentStyle}>
-        <h1>Your Text Here</h1>
-        <p>Additional description or content</p>
+    <section
+      className="bg-image"
+      style={{
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "scroll",
+      }}
+    >
+      <div className="container p-5 mb-4 text-white-50">
+        <h1> Testing </h1>
+        <h1> Testing </h1>
+        <h1> Testing </h1>
+        <h1> Testing </h1>
+        <h1> Testing </h1>
+        <h1> Testing </h1>
+        <h1> Testing </h1>
+        <h1> Testing </h1>
+        <h1> Testing </h1>
+        <h1> Testing </h1>
+        <h1> Testing </h1>
+        <h1> Testing </h1>
       </div>
-    </div>
+    </section>
   );
 }
 

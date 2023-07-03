@@ -1,33 +1,66 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import brandImg from "../assets/background_images/brand_image1.png";
 
 function NavBar() {
   return (
-    <>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand as={NavLink} to="/" exact="true">
-            <img
-              src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-              alt="Navbar Logo"
-              style={{ width: "55px", height: "auto" }}
-            />
-          </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link as={NavLink} to="/inspiration">
-              Inspiration
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/bookings">
-              Book With Us
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/community">
-              Community
-            </Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <NavLink className="navbar-brand" to="/">
+          <img
+            src={brandImg}
+            alt="Navbar Logo"
+            style={{ width: "80px", height: "80px" }}
+            className="rounded-5"
+          />
+        </NavLink>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/inspiration"
+                style={{ fontSize: "18px" }}
+              >
+                Inspiration
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/bookings"
+                style={{ fontSize: "18px" }}
+              >
+                Book With Us
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/community"
+                style={{ fontSize: "18px" }}
+              >
+                Community
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 
