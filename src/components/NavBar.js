@@ -1,10 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import brandImg from "../assets/background_images/brand_image1.png";
 
 function NavBar() {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav
+      className={`navbar navbar-expand-lg navbar-dark ${
+        isHomePage ? "" : "bg-dark"
+      }`}
+    >
       <div className="container">
         <NavLink className="navbar-brand" to="/">
           <img
@@ -25,16 +32,18 @@ function NavBar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul className="navbar-nav">
+        <div className="collapse navbar-collapse " id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/" style={{ fontSize: "20px" }}>
+                Home
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink
                 className="nav-link"
                 to="/inspiration"
-                style={{ fontSize: "18px" }}
+                style={{ fontSize: "20px" }}
               >
                 Inspiration
               </NavLink>
@@ -43,7 +52,7 @@ function NavBar() {
               <NavLink
                 className="nav-link"
                 to="/bookings"
-                style={{ fontSize: "18px" }}
+                style={{ fontSize: "20px" }}
               >
                 Book With Us
               </NavLink>
@@ -52,7 +61,7 @@ function NavBar() {
               <NavLink
                 className="nav-link"
                 to="/community"
-                style={{ fontSize: "18px" }}
+                style={{ fontSize: "20px" }}
               >
                 Community
               </NavLink>
