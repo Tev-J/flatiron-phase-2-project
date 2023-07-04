@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <div className="text-white">
-      <img className="bg-image" src={bgImg} style={moreStyle} />
+      <img className="bg-image" src={bgImg} alt="Concept" style={moreStyle} />
       <Header
         class={"align-middle"}
         pageHeader={"CONCEPTUAL BARBERSHOP"}
