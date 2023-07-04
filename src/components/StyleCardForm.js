@@ -27,7 +27,7 @@ function StyleCardForm({ addStyles, styles }) {
       }),
     };
 
-    fetch("https://my-server-j9z7.onrender.com/db/db.json/styles", configObj)
+    fetch(`${process.env.REACT_APP_API_URL}/styles`, configObj)
       .then((res) => res.json())
       .then((data) => {
         addStyles(data);

@@ -11,7 +11,7 @@ function StyleCard({ styleDesign }) {
     setLiked(!liked);
     const newLikes = liked ? updatedLikes - 1 : updatedLikes + 1;
 
-    fetch(`https://my-server-j9z7.onrender.com/db/db.json/styles/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/styles/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ likes: newLikes }),

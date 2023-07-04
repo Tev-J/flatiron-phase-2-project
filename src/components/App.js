@@ -11,7 +11,7 @@ function App() {
   const [styles, setStyles] = useState([]);
 
   useEffect(() => {
-    fetch("https://my-server-j9z7.onrender.com/db")
+    fetch(`${process.env.REACT_APP_API_URL}/styles`)
       .then((r) => r.json())
       .then((data) => setStyles(data.styles));
   }, []);
