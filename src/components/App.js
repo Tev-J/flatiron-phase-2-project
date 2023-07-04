@@ -4,7 +4,6 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import Bookings from "./Bookings";
 import StyleCardList from "./StyleCardList";
-import StyleCard from "./StyleCard";
 import StyleCardForm from "./StyleCardForm";
 import CommunityBoard from "./CommunityBoard";
 
