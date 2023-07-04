@@ -11,7 +11,7 @@ function App() {
   const [styles, setStyles] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/styles`)
+    fetch(`${process.env.REACT_APP_API_URL}`)
       .then((r) => r.json())
       .then((data) => setStyles(data.styles));
   }, []);
