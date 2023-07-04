@@ -14,10 +14,19 @@ function Home() {
     zIndex: -1,
   };
 
+  const centerIt = {
+    display: "table-cell",
+    verticalAlign: "middle",
+    width: "100%",
+    height: "100%",
+  };
+
   return (
-    <div className="text-white ">
+    <div className="text-white">
       <img className="bg-image" src={bgImg} alt="Bg image" style={moreStyle} />
       <Header
+        class={"align-middle"}
+        // style={centerIt}
         pageHeader={"CONCEPTUAL BARBERSHOP"}
         headerSupport={"Design | Service | Inspire"}
       />
