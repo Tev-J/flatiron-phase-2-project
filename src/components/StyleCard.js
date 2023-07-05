@@ -3,6 +3,7 @@ import { Card, Button } from "react-bootstrap";
 
 function StyleCard({ styleDesign }) {
   const { id, image, name, description, likes, price } = styleDesign;
+  const useableImg = `${process.env.REACT_APP_API_URL}${image}`;
   const [liked, setLiked] = useState(false);
   const [updatedLikes, setUpdatedLikes] = useState(likes);
 
@@ -36,7 +37,12 @@ function StyleCard({ styleDesign }) {
   return (
     <div className="col-md-4 mb-4 mx-auto" style={cardStyle}>
       <Card className="shadow p-3 mb-5 bg-light rounded justify-content-center">
-        <Card.Img variant="top" src={image} alt={name} style={imageStyle} />
+        <Card.Img
+          variant="top"
+          src={useableImg}
+          alt={name}
+          style={imageStyle}
+        />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description}</Card.Text>

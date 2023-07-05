@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/styles`)
       .then((r) => r.json())
-      .then((data) => setStyles(data.styles));
+      .then((data) => setStyles(data));
   }, []);
 
   function addStyles(newStyle) {
@@ -24,7 +24,6 @@ function App() {
   return (
     <div>
       <NavBar />
-      {/* <NewStyleCard addStyles={addStyles} styles={styles} /> */}
       <Routes>
         <Route exact={true} path="/" element={<Home />} />
         <Route path="/bookings" element={<Bookings />} />
