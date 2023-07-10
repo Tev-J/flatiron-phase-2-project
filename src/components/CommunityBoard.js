@@ -50,18 +50,23 @@ function CommunityBoard() {
       <div className="row align-items-md-stretch">
         <div className="col-md-6">
           <div className="h-100 p-5 text-white bg-dark rounded-3 shadow">
-            <h2>Eum dolores minus sed iste modi.</h2>
+            <h2>REACT: What Are Controlled Components?</h2>
             <p>
-              Lorem ipsum dolor sit amet. Cum quia nisi quo perspiciatis fugiat
-              33 galisum tenetur et necessitatibus facilis. Vel asperiores illum
-              eum aspernatur dolores aut praesentium error quo internos vero id
-              ducimus dolores qui autem delectus. Nam vitae tenetur a
-              repellendus eius ut maiores quod et voluptatum doloremque ut minus
-              adipisci ea cumque earum.
+              Turn your waiting time into learning time, and give your brain a
+              trim while you're at it!" Dive into my easy-to-follow article,
+              "REACT: What are Controlled Components?". In the time it takes to
+              get a fresh trim, you'll master an essential concept in React,
+              making your next coding project a cut above the rest!
             </p>
-            <button className="btn btn-outline-light" type="button">
-              Press for Good Luck
-            </button>
+            <a
+              href="https://medium.com/@tj_delph/react-what-are-controlled-components-b858844112cb"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn btn-outline-light" type="button">
+                Read My Blog
+              </button>
+            </a>
           </div>
         </div>
         <div className="col-md-6">
