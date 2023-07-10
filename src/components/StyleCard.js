@@ -35,16 +35,9 @@ function StyleCard({ styleDesign }) {
     borderRadius: "0.5px",
   };
 
-  const testingStyle = {
-    backgroundColor: "rgb(248,238,188)",
-  };
-
   return (
     <div className="col-md-4 mb-4 mx-auto" style={cardStyle}>
-      <Card
-        className="shadow p-3 mb-5  rounded justify-content-center"
-        // style={testingStyle}
-      >
+      <Card className="shadow p-3 mb-5  rounded justify-content-center">
         <Card.Img
           className="rounded-lg"
           variant="top"
