@@ -32,20 +32,31 @@ function StyleCard({ styleDesign }) {
     objectFit: "contain",
     maxHeight: "200px",
     maxWidth: "100%",
+    borderRadius: "0.5px",
+  };
+
+  const testingStyle = {
+    backgroundColor: "rgb(248,238,188)",
   };
 
   return (
     <div className="col-md-4 mb-4 mx-auto" style={cardStyle}>
-      <Card className="shadow p-3 mb-5 bg-light rounded justify-content-center">
+      <Card
+        className="shadow p-3 mb-5  rounded justify-content-center"
+        // style={testingStyle}
+      >
         <Card.Img
+          className="rounded-lg"
           variant="top"
           src={useableImg}
           alt={name}
           style={imageStyle}
         />
-        <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Text>{description}</Card.Text>
+        <Card.Body className="text-center">
+          <Card.Title style={{ fontSize: "20px" }} className="font-weight-bold">
+            {name}
+          </Card.Title>
+          <Card.Text className="font-weight-lighte">{description}</Card.Text>
           <Card.Text className="text-muted">{price}</Card.Text>
           <div>
             <Button

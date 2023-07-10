@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 
 function StyleCardForm({ addStyles, styles }) {
-  const navigate = useNavigate();
   const [userName, setUserName] = useState("");
   const [selectedStyle, setSelectedStyle] = useState("");
   const [styleImg, setStyleImg] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const navigate = useNavigate();
   const styleOptions = styles.filter((style) => style.origin === "Default");
 
   function handleSubmit(event) {
