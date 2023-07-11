@@ -12,8 +12,6 @@ function StyleCard({ styleDesign }) {
       ? `${process.env.REACT_APP_API_URL}${image}`
       : `${image}`;
 
-  console.log(useableImg);
-
   // sets like button as active and updates likes
   const handleLike = () => {
     setLiked(!liked);
@@ -45,6 +43,9 @@ function StyleCard({ styleDesign }) {
   return (
     <div className="col-md-4 mb-4 mx-auto" style={cardStyle}>
       <Card className="shadow p-3 mb-5  rounded justify-content-center">
+        <Card.Title style={{ fontSize: "20px" }} className="font-weight-bold">
+          {name}
+        </Card.Title>
         <Card.Img
           className="rounded-lg"
           variant="top"
@@ -53,9 +54,9 @@ function StyleCard({ styleDesign }) {
           style={imageStyle}
         />
         <Card.Body className="text-center">
-          <Card.Title style={{ fontSize: "20px" }} className="font-weight-bold">
+          {/* <Card.Title style={{ fontSize: "20px" }} className="font-weight-bold">
             {name}
-          </Card.Title>
+          </Card.Title> */}
           <Card.Text className="font-weight-lighte">{description}</Card.Text>
           <Card.Text className="text-muted">{price}</Card.Text>
           <div>

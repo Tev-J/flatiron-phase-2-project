@@ -4,7 +4,7 @@ import Header from "./Header";
 
 function StyleCardForm({ addStyles, styles }) {
   const [userName, setUserName] = useState("");
-  const [selectedStyle, setSelectedStyle] = useState("");
+  const [styleName, setStyleName] = useState("");
   const [styleImg, setStyleImg] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -18,11 +18,11 @@ function StyleCardForm({ addStyles, styles }) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: selectedStyle,
+        name: styleName,
         image: styleImg,
         description: userName,
         likes: 0,
-        price: "unknown",
+        price: "*consult for price*",
         origin: "Community_Post",
       }),
     };
@@ -33,7 +33,7 @@ function StyleCardForm({ addStyles, styles }) {
         addStyles(data);
         // Reset form fields
         setUserName("");
-        setSelectedStyle("");
+        setStyleName("");
         setStyleImg("");
         setIsSubmitted(true);
         // Redirect to the Community page after 3 seconds
@@ -88,22 +88,15 @@ function StyleCardForm({ addStyles, styles }) {
               />
             </div>
 
-            <div className="form-floating mb-3">
-              <select
-                className="form-select"
-                id="floatingSelect"
-                value={isSubmitted ? "" : selectedStyle}
-                onChange={(e) => setSelectedStyle(e.target.value)}
-              >
-                <option value="">Community Upload</option>
-
-                {styleOptions.map((style) => (
-                  <option key={style.id} value={style.name}>
-                    {style.name}
-                  </option>
-                ))}
-              </select>
-              <label htmlFor="floatingSelect">Style Name</label>
+            <div class="mb-3">
+              <input
+                onChange={(e) => setStyleName(e.target.value)}
+                type="text"
+                className="form-control"
+                id="floatingInputValue"
+                placeholder="Style Name"
+                value={styleName}
+              />
             </div>
 
             <div>
