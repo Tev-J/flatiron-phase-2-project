@@ -2,10 +2,17 @@ import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 
 function StyleCard({ styleDesign }) {
-  const { id, image, name, description, likes, price } = styleDesign;
-  const useableImg = `${process.env.REACT_APP_API_URL}${image}`;
+  const { id, image, name, description, likes, price, origin } = styleDesign;
   const [liked, setLiked] = useState(false);
   const [updatedLikes, setUpdatedLikes] = useState(likes);
+
+  //check origin to apply correct endpoint
+  const useableImg =
+    origin === "Default"
+      ? `${process.env.REACT_APP_API_URL}${image}`
+      : `${image}`;
+
+  console.log(useableImg);
 
   // sets like button as active and updates likes
   const handleLike = () => {
