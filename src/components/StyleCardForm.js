@@ -68,34 +68,46 @@ function StyleCardForm({ addStyles, styles }) {
           <form className="container" onSubmit={handleSubmit}>
             <h3 style={{ textAlign: "Center" }}>Upload Style</h3>
             <div className="mb-3">
+              <label htmlFor="userName" className="form-label">
+                Full Name
+              </label>
               <input
                 onChange={(e) => setUserName(e.target.value)}
                 type="text"
                 className="form-control "
-                id="floatingInputValue"
-                placeholder="Username"
+                id="userName"
+                placeholder="enter your name"
                 value={userName}
+                required
               />
             </div>
-            <div class="mb-3">
+            <div className="mb-3">
+              <label htmlFor="image_url" className="form-label">
+                Image URL
+              </label>
               <input
                 onChange={(e) => setStyleImg(e.target.value)}
                 type="text"
                 className="form-control"
-                id="floatingInputValue"
-                placeholder="Image URL"
+                id="image_URL"
+                placeholder="provide a link to your image"
                 value={styleImg}
+                required
               />
             </div>
 
-            <div class="mb-3">
+            <div className="mb-3">
+              <label htmlFor="style_name" className="form-label">
+                Style Name
+              </label>
               <input
                 onChange={(e) => setStyleName(e.target.value)}
                 type="text"
                 className="form-control"
-                id="floatingInputValue"
-                placeholder="Style Name"
+                id="style_name"
+                placeholder="enter style Name"
                 value={styleName}
+                required
               />
             </div>
 

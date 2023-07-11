@@ -99,6 +99,7 @@ function Bookings() {
               type="text"
               className="form-control"
               id="clientName"
+              placeholder="provide your full name"
               value={clientName}
               onChange={(e) => setClientName(e.target.value)}
               required
@@ -112,6 +113,7 @@ function Bookings() {
               type="tel"
               className="form-control"
               id="phoneNumber"
+              placeholder="Use dashes. Example: 000-000-0000"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
               required
@@ -125,6 +127,7 @@ function Bookings() {
               type="text"
               className="form-control"
               id="styleChoice"
+              placeholder=" Unsure? Check out our Inspiration Board!"
               value={styleChoice}
               onChange={(e) => setStyleChoice(e.target.value)}
               required
