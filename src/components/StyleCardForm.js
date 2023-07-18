@@ -9,7 +9,6 @@ function StyleCardForm({ addStyles, styles }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const navigate = useNavigate();
-  const styleOptions = styles.filter((style) => style.origin === "Default");
 
   function handleSubmit(event) {
     event.preventDefault();
