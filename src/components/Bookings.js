@@ -61,31 +61,44 @@ function Bookings() {
         headerSupport={"We Call. You Confirm."}
       />
       {isSubmitted ? (
-        <div>
-          <h2>Appointment Book</h2>
-          <p>{clientName}'s Appointment Details:</p>
-          <ul>
-            <li>
-              {day} between {timeSlot}
-            </li>
-            <li>Hairstyle: {styleChoice}</li>
-            <br></br>
-            <li>Contact: {phoneNumber}</li>
-          </ul>
-          <button
-            type="submit"
-            className="btn btn-outline-dark"
-            onClick={(e) => handleBookAnotherAppointment(e)}
-          >
-            Book Another Appointment
-          </button>
-          <button
-            type="submit"
-            className="btn btn-outline-dark"
-            onClick={(e) => handleExit(e)}
-          >
-            Exit
-          </button>
+        <div className="d-flex justify-content-center">
+          <div className="col-md-6">
+            <div className="h-100 p-5 text-white bg-dark rounded-3 shadow">
+              <h2 className="text-center">
+                {clientName}'s Appointment Succesfully Booked!
+              </h2>
+              <br></br>
+              <p>Details:</p>
+              <ul>
+                <li>
+                  {day} between {timeSlot}
+                </li>
+                <li>Hairstyle: {styleChoice}</li>
+              </ul>
+              <br></br>
+              <p>
+                We will contact you at {phoneNumber} to confirm the appointment
+                details.
+              </p>
+              <p> Chat soon, {clientName}!</p>
+              <div className="d-flex justify-content-end">
+                <button
+                  type="submit"
+                  className="btn btn-outline-light mx-2"
+                  onClick={(e) => handleBookAnotherAppointment(e)}
+                >
+                  Book Another Appointment
+                </button>
+                <button
+                  type="submit"
+                  className="btn btn-outline-light mx-2"
+                  onClick={(e) => handleExit(e)}
+                >
+                  Exit
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       ) : (
         <div className="container shadow-lg p-4 bg-white rounded">
