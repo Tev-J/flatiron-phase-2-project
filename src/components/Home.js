@@ -15,13 +15,20 @@ function Home() {
   };
 
   return (
-    <div className="text-white">
+    <div style={{ color: "#c8deca" }}>
       <img className="bg-image" src={bgImg} alt="Concept" style={moreStyle} />
-      <Header
-        class={"align-middle"}
-        pageHeader={"CONCEPTUAL BARBERSHOP"}
-        headerSupport={"Design | Service | Inspire"}
-      />
+      <div className="p-5">
+        <Header
+          className={"align-middle"}
+          pageHeader={"VIRTUAL BARBERSHOP-FRONT"}
+          headerSupport={"Inspiration | Service | Community "}
+        />
+      </div>
+      <div className="text-center mt-1 p-5 ">
+        <h2> | contact me |</h2>
+        <h3>404-xox-xxxx</h3>
+        <h3>tj_delph@yahoo.com</h3>
+      </div>
     </div>
   );
 }
