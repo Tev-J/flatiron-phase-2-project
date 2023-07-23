@@ -34,20 +34,24 @@ function StyleCard({ styleDesign }) {
   };
 
   const imageStyle = {
-    objectFit: "contain",
+    objectFit: "cover",
     maxHeight: "200px",
     maxWidth: "100%",
     borderRadius: "0.5px",
   };
 
   return (
-    <div className="col-md-4 mb-4 mx-auto" style={cardStyle}>
-      <Card className="shadow p-3 mb-5  rounded justify-content-center">
-        <Card.Title style={{ fontSize: "20px" }} className="font-weight-bold">
+    <div className="col-md-4 mb-4 mx-auto rounded-lg " style={cardStyle}>
+      <Card className="shadow-lg p-3 mb-5 text-white justify-content-center bg-dark">
+        <Card.Title
+          style={{ fontSize: "20px" }}
+          className="font-weight-bold text-center text-uppercase"
+        >
           {name}
         </Card.Title>
+        <br></br>
         <Card.Img
-          className="rounded-lg"
+          className="rounded-top"
           variant="top"
           src={useableImg}
           alt={name}
@@ -57,8 +61,8 @@ function StyleCard({ styleDesign }) {
           {/* <Card.Title style={{ fontSize: "20px" }} className="font-weight-bold">
             {name}
           </Card.Title> */}
-          <Card.Text className="font-weight-lighte">{description}</Card.Text>
-          <Card.Text className="text-muted">{price}</Card.Text>
+          <Card.Text className="text-white-50">{description}</Card.Text>
+          <Card.Text className="text-white-50">{price}</Card.Text>
           <div>
             <Button
               variant={liked ? "primary" : "outline-primary"}

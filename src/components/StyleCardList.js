@@ -12,8 +12,8 @@ function StyleCardList({ styles }) {
   return (
     <div>
       <Header
-        pageHeader={"Inspire. Be Inspired"}
-        headerSupport={"Endure Change, Real Change. Design Yourself."}
+        pageHeader={"Inspiration"}
+        headerSupport={"Transform Yourself. | Inspire Others."}
       />
       <div className="d-flex justify-content-center ">
         <button
@@ -24,7 +24,10 @@ function StyleCardList({ styles }) {
           Upload Your Own Style
         </button>
       </div>
-      <div className="container shadow-lg p-3 mb-5 bg-light rounded">
+      <div
+        className="container shadow-lg p-3 mb-5 rounded-lg bg-dark"
+        // style={{ backgroundColor: "#e1ede3" }}
+      >
         <div className="row g-3 mt-4">
           {styles.map((style) => (
             <div className="col-12 col-md-6 col-lg-4" key={style.id}>
