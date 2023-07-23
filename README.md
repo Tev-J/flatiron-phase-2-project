@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Conceptual Barber Shop App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Barbershop App Logo](https://conceptualbarberfront.netlify.app/static/media/brand_image1.fd32a681f0c7c9390976.png)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The Conceptual Barber Shop App is a web application that connects customers with barbers and hairstylists. The app offers a platform for users to book appointments, explore hairstyle inspirations, and share their own haircuts with the community.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Appointment Booking
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app provides a platform for users to easily book an appointment with their favorite barber.
 
-### `npm test`
+### 2. Style Inspiration
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Users can through a collection of hairstyle ideas from professional barbers and community members. All hairstyle images were created using Midjourney, an AI-powered image generator. Users are also allowed to upload their best hairstyle and inspire others in the community.
 
-### `npm run build`
+### 3. Community Board
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The community board is a hub of interaction and entertainment.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Front-end**: The app is built using **React.js**. Bootstrap is utilized for most styling and responsive design. It is a single-page application built using create-react-app.
 
-### `npm run eject`
+- **Back-end**: The back-end server is developed using **Node.js**. https://github.com/Tev-J/json-server-template.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Image Generation**: The hairstyle inspiration images are generated using **Midjourney**, an AI model developed by OpenAI.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Deployment**: The Conceptual Barber Shop App is hosted on **Netlify** (https://conceptualbarberfront.netlify.app/), and the backend is hosted on **Render** (https://my-server-j9z7.onrender.com/styles).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation and Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository: git clone https://github.com/your_username/barbershop-app.git
+2. Install dependencies: npm install
+3. Set up environment variables for the front-end and back-end.
+4. Run the development server: npm start
 
-## Learn More
+#### For the backend, you also need to set up the JSON server. Follow these steps:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the JSON server template repository: git clone https://github.com/Tev-J/json-server-template.git
+2. Install dependencies: npm install
+3. Start the JSON server: npm run dev
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### The JSON server will provide the necessary API endpoints for handling community board data.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Tev-J/flatiron-phase-2-project/blob/a18ae30546fc4de12f6f61b47d392d317361c6c2/LICENSE) file for details.
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! If you encounter any issues or have ideas to improve the app, feel free to open an issue or create a pull request.
