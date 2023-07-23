@@ -57,8 +57,8 @@ function Bookings() {
     // I need to include ternary after form is submitted //after the card buttons
     <div>
       <Header
-        pageHeader={"Book Appointment"}
-        headerSupport={"We Call. You Confirm."}
+        pageHeader={"Book Your Appointment"}
+        headerSupport={"Unlock Your Style | We'll Connect in Awhile"}
       />
       {isSubmitted ? (
         <div className="d-flex justify-content-center">
@@ -94,7 +94,7 @@ function Bookings() {
                   className="btn btn-outline-light mx-2"
                   onClick={(e) => handleExit(e)}
                 >
-                  Exit
+                  Go Home
                 </button>
               </div>
             </div>
